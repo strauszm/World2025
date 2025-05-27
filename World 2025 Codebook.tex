@@ -1,0 +1,387 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{setspace} 
+\usepackage{harvard}
+\usepackage[]{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black]{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{makecell}
+\setcounter{secnumdepth}{0}
+\title{Codebook for World 2025}
+\author{Michael Strausz}
+
+\begin{document}
+	\pagestyle{fancy}
+	\fancyhead{} % clear all header fields
+	\fancyhead[LO,LE]{\textbf{Michael Strausz}}
+	\fancyhead[RO,RE]{\textbf{World 2025 Codebook}}
+	
+\maketitle
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\section{\centering{Country Name Variables}}
+\textcolor{white}{.}
+\vskip.01in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & country \\ 
+	\textit{Definition} & The full name of the country \\  
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & country\_name \\
+	\textit{Date added} & January 20, 2025  
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & countryID \\ 
+	\textit{Definition} & Three letter country abbreviation \\  
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & country\_text\_id \\
+	\textit{Date added} & January 20, 2025     
+\end{tabular}
+\vskip.2in
+
+\section{\centering{Democracy Variables}}
+\textcolor{white}{.}
+	\vskip.01in
+
+	\begin{tabular}{ r l }
+		\textbf{Variable} &  freeFair \\ 
+		\textit{Definition} & Free and fair elections, 2023 \\
+		\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval ranging from 0 (not free and fair elections) to 1 (free and\\fair elections)} \\
+		\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem}\\
+		\textit{Original name} & v2xel\_frefair \\  
+		\textit{Date added} & January 20, 2025     
+	\end{tabular}
+	\vskip.1in
+	
+	\begin{tabular}{ r l }
+		\textbf{Variable} & comVote \\ 
+		\textit{Definition} & Country requires citizens to vote, 2023 \\
+		\makecell[t r]{\textit{Scale}} &  \makecell[t l]{1 means the country requires citizens to vote, 0 means it doesn't} \\
+		\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+		\textit{Original name} & v2elcomvot \\  
+		\textit{Date added} & January 20, 2025     
+	\end{tabular}
+	\vskip.1in
+		
+\begin{tabular}{ r l }
+	\textbf{Variable} &  femLeg \\ 
+	\textit{Definition} & \makecell[t l]{Percentage of the lower (or unicameral) chamber of the legislature\\that was female in 2023}
+	\\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2lgfemleg \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  polity \\ 
+	\textit{Definition} & \makecell[t l]{A measure of democracy, 2020}\\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval score ranging from -10 (strongly autocratic) to 10 (strongly \\democratic)} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & e\_p\_polity \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\section{\centering{Human Rights Variables}}
+\textcolor{white}{.}
+\vskip.01in
+		
+\begin{tabular}{ r l }
+	\textbf{Variable} &  torture \\ 
+	\textit{Definition} & Is there freedom from torture? (2023)\\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Ordinal variable with five levels: none, weak, somewhat, mostly, and\\complete} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2cltort\_ord \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+		
+\begin{tabular}{ r l }
+	\textbf{Variable} &  freeExp \\ 
+	\textit{Definition} & Freedom of expression, 2023 \\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval ranging from 0 (low freedom of expression) to 1 (high \\freedom of expression)} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2x\_freexp\_altinf \\  
+	\textit{Date added} & January 20, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  internetPriv \\ 
+	\textit{Definition} & Internet user privacy and user data is protected by law, 2023 \\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{1 means there is a right to internet privacy, 0 means there is not} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2smprivex\_ord \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  tripScore \\ 
+	\textit{Definition} & Treatment of transgendered individuals, 2021 \\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval from 0-12. 0 means there are no observed laws guaranteeing\\rights to transgender individuals, 12 means all measured laws\\guaranteeing rights to transgender individuals are observed} \\
+	\textit{Source} & \href{https://www.myleswilliamson.net/trip-data}{Trans Rights Indicator Project (TRIP)} \\
+	\textit{Original name} & trip\_score \\  
+	\textit{Date added} & February 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\pagebreak
+\section{\centering{Society Variables}}
+\textcolor{white}{.}
+\vskip.01in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  csPart \\ 
+	\textit{Definition} & Civil society participation in policymaking, 2023 \\
+	\makecell[t r]{\textit{Details}} & \makecell[t l]{Are major Civil Society Organizations (CSOs) routinely consulted by \\policymakers; how large is the involvement of people in CSOs; are\\women prevented from participating; and is legislative candidate\\nomination within party organization highly decentralized or made\\through party primaries?}\\		
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval ranging from 0 (low participation) to 1 (high participation)} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2x\_cspart \\  
+	\textit{Date added} & January 20, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  socPolarize \\ 
+	\textit{Definition} & \makecell[t l]{How would you characterize the differences of opinions on major\\political issues in this society? (2023)}\\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Ordinal variable with five levels: Serious polarization; Moderate\\ polarization; Medium polarization; Limited polarization; No\\polarization} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2smpolsoc\_ord \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  yearsEd \\ 
+	\textit{Definition} & \makecell[t l]{Average years of education among citizens over 15 (2023)}\\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & e\_peaveduc \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & corruption \\ 
+	\textit{Definition} & \makecell[t l]{Perceptions of the
+		degree of public sector corruption as seen by\\ business people, risk analysts and the general public, 2022} \\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval score ranging from 0 (highly corrupt) to 100 (highly clean)} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & e\_ti\_cpi \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & edInequality \\ 
+	\textit{Definition} & \makecell[t l]{How unequal is the level of education achieved by the population aged\\15 years and
+		older? (2010)} \\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval score ranging from 0 (highly equal) to 100 (highly unequal)} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & e\_peedgini \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  religion \\ 
+	\textit{Definition} & Predominant religion in a country. \\
+	\makecell[t r]{\textit{Details}} & \makecell[t l]{Coded as character. Values are Eastern, Hindu, Jewish, Muslim,\\Orthodox, Other, Protestant, Roman Cath}\\		
+	\textit{Source} & CIA World Factbook, cited in \href{https://www.pippanorris.com/data}
+	{Democracy Cross National Data} \\
+	\textit{Original name} & Religion \\  
+	\textit{Date added} & Fall 2015     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  lang \\ 
+	\textit{Definition} & Number of official languages. \\
+	\textit{Source} & UNESCO, cited in \href{https://www.pippanorris.com/data}
+	{Democracy Cross National Data} \\
+	\textit{Original name} & Lang1 \\  
+	\textit{Date added} & Fall 2015     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  fracEth \\ 
+	\textit{Definition} & Ethnic and linguistic fractionalization. \\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval ranging from 0 (least
+		fractionalized) to 1 (most fractionalized)} \\
+	\textit{Source} & Alesina et. al. 2002, cited in \href{https://www.pippanorris.com/data}
+	{Democracy Cross National Data} \\
+	\textit{Original name} & frac\_eth \\  
+	\textit{Date added} & Fall 2015     
+\end{tabular}
+\vskip.1in
+
+\section{\centering{Economic Variables}}
+\textcolor{white}{.}
+\vskip.01in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  equalRes \\ 
+	\textit{Definition} & Equality in the distribution of resources, 2023 \\
+	\makecell[t r]{\textit{Details}} & \makecell[t l]{Measure looks at poverty rates, equality of income distribution,\\ equality of access to health care and social services, etc.}\\		
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval ranging from 0 (low equality) to 1 (high equality)} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2xeg\_eqdr \\  
+	\textit{Date added} & January 20, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  govtOwner \\ 
+	\textit{Definition} & \makecell[t l]{Does the state own or directly control important sectors of the\\economy? (2023)}\\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Ordinal variable with five levels: complete govt control; most; much;\\some; little  govt control} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2clstown\_ord \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & gdpMillions \\ 
+	\textit{Definition} & \makecell[t l]{Gross domestic product (the total values of all goods and services\\produced in a country) in 2019} \\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval variable measured in millions of 2014 US dollars} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & e\_gdp \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\section{\centering{History Variables}}
+\textcolor{white}{.}
+\vskip.01in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  regimeDur \\ 
+	\textit{Definition} & Years that current regime had been in power as of January 1, 2023 \\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Interval variable rounded to nearest year} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2regdur \\  
+	\textit{Date added} & January 20, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  colony \\ 
+	\textit{Definition} & Former colony of what country? \\
+	\makecell[t r]{\textit{Scale}} &  \makecell[t l]{Coded as character. Values are belgium, france, netherland, none, other,\\ottoman, portugal, soviet uni, spain, uk.} \\
+	\textit{Source} & CIA World Factbook, cited in \href{https://www.pippanorris.com/data}
+	{Democracy Cross National Data} \\
+	\textit{Original name} & Colony \\  
+	\textit{Date added} & Fall 2015     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  indep \\ 
+	\textit{Definition} & Year country gained independence. \\
+	\textit{Source} & CIA World Factbook, cited in \href{https://www.pippanorris.com/data}
+	{Democracy Cross National Data} \\
+	\textit{Original name} & Independence \\  
+	\textit{Date added} & Fall 2015     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  womVote \\ 
+	\textit{Definition} & Year women were first enfranchised. \\
+	\textit{Source} & Inter-Parliamentary Union, cited in \href{https://www.pippanorris.com/data}
+	{Democracy Cross National Data} \\
+	\textit{Original name} & Womvote \\  
+	\textit{Date added} & Fall 2015     
+\end{tabular}
+\vskip.1in
+
+\section{\centering{Demographic and Geographic Variables}}
+\textcolor{white}{.}
+\vskip.01in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  terrControl \\ 
+	\textit{Definition} & Percent of the territory over which the state has direct control, 2023 \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & v2svstterr \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} &  area \\ 
+	\textit{Definition} & \makecell[t l]{Country's land area in km, 2023}\\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & e\_area \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & pop \\ 
+	\textit{Definition} & \makecell[t l]{Population in 2019} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & e\_pop \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & ferRate \\ 
+	\textit{Definition} & \makecell[t l]{Average number of children born over a typical woman's lifetime,\\2020} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & e\_miferrat \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & lifeExp \\ 
+	\textit{Definition} & \makecell[t l]{Average life expectancy at birth, 2022} \\
+	\textit{Source} & \href{https://v-dem.net/data/the-v-dem-dataset/}{V-Dem} \\
+	\textit{Original name} & e\_pelifeex \\  
+	\textit{Date added} & January 21, 2025     
+\end{tabular}
+\vskip.1in
+
+\section{\centering{Sports Variables}}
+\textcolor{white}{.}
+\vskip.01in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & bronze2024 \\ 
+	\textit{Definition} & \makecell[t l]{Bronze medals won at 2024 Paris Olympics} \\
+	\textit{Source} & \href{https://www.statista.com/statistics/1483973/medals-olympic-summer-games-paris-2024/}{Statista} \\
+	\textit{Original name} & Bronze \\  
+	\textit{Date added} & Oct 24, 2024     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & silver2024 \\ 
+	\textit{Definition} & \makecell[t l]{Silver medals won at 2024 Paris Olympics} \\
+	\textit{Source} & \href{https://www.statista.com/statistics/1483973/medals-olympic-summer-games-paris-2024/}{Statista} \\
+	\textit{Original name} & Silver \\  
+	\textit{Date added} & Oct 24, 2024     
+\end{tabular}
+\vskip.1in
+
+\begin{tabular}{ r l }
+	\textbf{Variable} & gold2024 \\ 
+	\textit{Definition} & \makecell[t l]{Gold medals won at 2024 Paris Olympics} \\
+	\textit{Source} & \href{https://www.statista.com/statistics/1483973/medals-olympic-summer-games-paris-2024/}{Statista} \\
+	\textit{Original name} & Gold \\  
+	\textit{Date added} & Oct 24, 2024     
+\end{tabular}
+\vskip.1in
+\end{document}
