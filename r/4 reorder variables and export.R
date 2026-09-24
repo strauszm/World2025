@@ -1,6 +1,6 @@
 ####################################
 # Michael Strausz
-# Read in TRIP data
+# Reorder variables and export
 # 2/20/2025 : 2/20/2025
 ####################################
 
